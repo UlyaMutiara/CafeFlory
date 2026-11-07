@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="#FFFFFF"
+    app:strokeWidth="1dp"
+    app:strokeColor="#DCE5E0">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp">
+
+        <!-- Kotak Placeholder Foto Menu -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="#F4F7F4">
+
+            <ImageView
+                android:id="@+id/ivMenuPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/logo_cafe"
+                android:scaleType="centerCrop"
+                android:contentDescription="Menu Photo" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Informasi Menu (Nama, Deskripsi, Harga) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="14dp">
+
+            <TextView
+                android:id="@+id/tvNamaMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kopi Susu Gula Aren"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#2C4A3E" />
+
+            <TextView
+                android:id="@+id/tvDeskripsiMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="• Espresso, susu, gula aren"
+                android:textSize="12sp"
+                android:textColor="#7A9A8B"
+                android:layout_marginTop="2dp" />
+
+            <TextView
+                android:id="@+id/tvHargaMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="• Rp 22.000"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="#2C4A3E"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

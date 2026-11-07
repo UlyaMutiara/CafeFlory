@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EAF2EE"
+    android:padding="24dp">
+
+    <!-- Kartu Utama mengambang di Tengah (Makin Aesthetic & Modern) -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="#FFFFFF">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="28dp">
+
+                <!-- Logo Cafe Flory Kecil/Header Card -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    app:cardCornerRadius="36dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="#F4F7F4"
+                    android:layout_marginBottom="16dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/logo_cafe"
+                        android:scaleType="centerCrop" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- Judul Sesuai Wireframe -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Create Account"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#2C4A3E"
+                    android:layout_marginBottom="4dp"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sign up to start your coffee journey"
+                    android:textSize="13sp"
+                    android:textColor="#7A9A8B"
+                    android:layout_marginBottom="24dp"
+                    android:gravity="center" />
+
+                <!-- Input Nama Lengkap -->
+                <EditText
+                    android:id="@+id/etNamaLengkapReg"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:hint="Nama Lengkap"
+                    android:textColorHint="#9CAFA6"
+                    android:textColor="#2C4A3E"
+                    android:autofillHints="name"
+                    android:inputType="textPersonName"
+                    android:paddingHorizontal="16dp"
+                    android:background="@drawable/edittext_custom"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Input Username -->
+                <EditText
+                    android:id="@+id/etUsernameReg"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:hint="Username"
+                    android:textColorHint="#9CAFA6"
+                    android:textColor="#2C4A3E"
+                    android:autofillHints="username"
+                    android:inputType="text"
+                    android:paddingHorizontal="16dp"
+                    android:background="@drawable/edittext_custom"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Input Password -->
+                <EditText
+                    android:id="@+id/etPasswordReg"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:hint="Password"
+                    android:textColorHint="#9CAFA6"
+                    android:textColor="#2C4A3E"
+                    android:autofillHints="password"
+                    android:inputType="textPassword"
+                    android:paddingHorizontal="16dp"
+                    android:background="@drawable/edittext_custom"
+                    android:layout_marginBottom="28dp" />
+
+                <!-- Tombol Register -->
+                <Button
+                    android:id="@+id/btnRegisterSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:text="Register"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:backgroundTint="#2C4A3E" />
+
+            </LinearLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EAF2EE"
+    android:padding="24dp">
+
+    <!-- Kartu Utama mengambang di Tengah -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="#FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="32dp">
+
+            <!-- Logo Cafe Flory Kecil/Header Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:cardCornerRadius="40dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="#F4F7F4">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/logo_cafe"
+                    android:scaleType="centerCrop" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- Judul Halaman -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome to Cafe Flory"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#2C4A3E"
+                android:layout_marginTop="16dp" />
+
+            <!-- Subtitle/Slogan -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Join as a member &amp; experience more fun from various meals"
+                android:textSize="13sp"
+                android:textColor="#7A9A8B"
+                android:gravity="center"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="32dp" />
+
+            <!-- Tombol Register (Hijau Tua Solid) -->
+            <Button
+                android:id="@+id/btnOptionRegister"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="Register"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:backgroundTint="#2C4A3E"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Tombol Login (Style Soft Mint) -->
+            <Button
+                android:id="@+id/btnOptionLogin"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="Login"
+                android:textColor="#2C4A3E"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:backgroundTint="#DCE5E0" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

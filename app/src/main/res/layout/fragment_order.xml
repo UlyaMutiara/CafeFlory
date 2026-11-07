@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EAF2EE"
+    android:padding="24dp">
+
+    <!-- Area Input Form (Bisa di-scroll jika layar kecil) -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btnOrderKirim"
+        android:layout_alignParentTop="true"
+        android:scrollbars="none"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp">
+
+            <!-- Judul Halaman -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alamat"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#2C4A3E"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Input Nama Lengkap -->
+            <EditText
+                android:id="@+id/etNamaOrder"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:hint="Nama Lengkap"
+                android:textColorHint="#9CAFA6"
+                android:textColor="#2C4A3E"
+                android:paddingHorizontal="16dp"
+                android:background="@drawable/edittext_custom"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Input Alamat -->
+            <EditText
+                android:id="@+id/etAlamatOrder"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:hint="Alamat"
+                android:textColorHint="#9CAFA6"
+                android:textColor="#2C4A3E"
+                android:gravity="top|start"
+                android:padding="16dp"
+                android:background="@drawable/edittext_custom"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Input Patokan -->
+            <EditText
+                android:id="@+id/etPatokanOrder"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:hint="Detail lengkap"
+                android:textColorHint="#9CAFA6"
+                android:textColor="#2C4A3E"
+                android:gravity="top|start"
+                android:padding="16dp"
+                android:background="@drawable/edittext_custom" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Tombol Terkunci di Paling Bawah Secara Presisi -->
+    <Button
+        android:id="@+id/btnOrderKirim"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_alignParentBottom="true"
+        android:text="Order dan Kirim"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:backgroundTint="#2C4A3E" />
+
+</RelativeLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EAF2EE"
+    android:padding="24dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btnSelesaiOk"
+        android:layout_alignParentTop="true"
+        android:scrollbars="none"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp">
+
+            <!-- Sapaan Nama Dinamis di Luar Card -->
+            <TextView
+                android:id="@+id/tvKonfirmasiNama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Halo Nama,"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#2C4A3E"
+                android:layout_marginBottom="140dp"
+                android:gravity="start" />
+
+            <!-- FLOATING CARD UNTUK KONTEN OK & PESAN -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:strokeWidth="1.5dp"
+                app:strokeColor="#DCE5E0"
+                android:layout_marginBottom="100dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:paddingVertical="36dp"
+                    android:paddingHorizontal="24dp">
+
+                    <!-- Lingkaran Ikon OK -->
+                    <FrameLayout
+                        android:layout_width="125dp"
+                        android:layout_height="125dp"
+                        android:background="@drawable/bg_circle_ok"
+                        android:layout_marginBottom="28dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="OK"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:textColor="#2C4A3E"
+                            android:layout_gravity="center" />
+                    </FrameLayout>
+
+                    <!-- Pesan Konfirmasi Pesanan -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Thanks for your order!\nJust hang tight, our courier will be there soon to deliver it!"
+                        android:textSize="20sp"
+                        android:textColor="#5A7A6E"
+                        android:gravity="center"
+                        android:lineSpacingExtra="5dp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Tombol Oke di Bagian Paling Bawah -->
+    <Button
+        android:id="@+id/btnSelesaiOk"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_alignParentBottom="true"
+        android:text="Oke"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:backgroundTint="#2C4A3E" />
+
+</RelativeLayout>

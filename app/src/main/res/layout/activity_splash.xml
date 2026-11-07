@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EAF2EE"
+    android:padding="24dp">
+
+    <!-- Kartu Utama di Tengah -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="#FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="32dp">
+
+            <!-- Logo -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                app:cardCornerRadius="55dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="#F4F7F4">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/logo_cafe"
+                    android:scaleType="centerCrop" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- Judul -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cafe Flory"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="#2C4A3E"
+                android:layout_marginTop="20dp" />
+
+            <!-- Slogan -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bloom and Breathe in Every Bite"
+                android:textSize="13sp"
+                android:textColor="#7A9A8B"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="32dp"
+                android:gravity="center" />
+
+            <!-- Tombol Start Now -->
+            <Button
+                android:id="@+id/btnStartNow"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="Start now"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:backgroundTint="#2C4A3E" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

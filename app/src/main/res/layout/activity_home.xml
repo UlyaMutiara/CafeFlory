@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EAF2EE">
+
+    <!-- Container untuk Fragments (Home, Order, Profile) -->
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigationLayout"
+        android:layout_alignParentTop="true" />
+
+    <!-- Floating Bottom Navigation Bar -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bottomNavigationLayout"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="32dp"
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:strokeWidth="1.5dp"
+        app:strokeColor="#DCE5E0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="6dp">
+
+            <!-- TAB 1: HOME -->
+            <LinearLayout
+                android:id="@+id/navHome"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:gravity="center"
+                android:background="@drawable/bg_nav_active">
+
+                <TextView
+                    android:id="@+id/tvNavHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Home"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+
+            <!-- SEKAT PEMISAH VERTIKAL 1 -->
+            <View
+                android:layout_width="1.5dp"
+                android:layout_height="24dp"
+                android:background="#E0EBE5" />
+
+            <!-- TAB 2: ORDER -->
+            <LinearLayout
+                android:id="@+id/navOrder"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvNavOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Order"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#7A9A8B" />
+            </LinearLayout>
+
+            <!-- SEKAT PEMISAH VERTIKAL 2 -->
+            <View
+                android:layout_width="1.5dp"
+                android:layout_height="24dp"
+                android:background="#E0EBE5" />
+
+            <!-- TAB 3: PROFILE -->
+            <LinearLayout
+                android:id="@+id/navProfile"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvNavProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profile"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#7A9A8B" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

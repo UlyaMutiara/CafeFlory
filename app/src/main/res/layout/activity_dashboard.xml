@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EAF2EE"> <!-- Padding root dihapus agar nav bar bisa turun ke bawah -->
+
+    <!-- Konten Utama (ScrollView) -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigationLayout"
+        android:scrollbars="none">
+
+        <!-- Padding 20dp dipindahkan ke sini agar isi menu tetap rapi dan tidak mentok pinggir -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Sapaan Nama Pengguna -->
+            <TextView
+                android:id="@+id/tvHaloNama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Halo Nama"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="#2C4A3E"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Judul Seksi Makanan/Menu -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Food and Beverages"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#2C4A3E"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Daftar 10 Menu Item -->
+            <include android:id="@+id/itemMenu1" layout="@layout/item_menu" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" />
+            <include android:id="@+id/itemMenu2" layout="@layout/item_menu" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" />
+            <include android:id="@+id/itemMenu3" layout="@layout/item_menu" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" />
+            <include android:id="@+id/itemMenu4" layout="@layout/item_menu" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" />
+            <include android:id="@+id/itemMenu5" layout="@layout/item_menu" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" />
+            <include android:id="@+id/itemMenu6" layout="@layout/item_menu" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" />
+            <include android:id="@+id/itemMenu7" layout="@layout/item_menu" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" />
+            <include android:id="@+id/itemMenu8" layout="@layout/item_menu" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" />
+            <include android:id="@+id/itemMenu9" layout="@layout/item_menu" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" />
+            <include android:id="@+id/itemMenu10" layout="@layout/item_menu" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="24dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Floating Bottom Navigation Bar (Turun ke bawah dengan pas & aesthetic) -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bottomNavigationLayout"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="32dp"
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:strokeWidth="1.5dp"
+        app:strokeColor="#DCE5E0"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="6dp">
+
+            <!-- TAB 1: HOME (AKTIF) -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:gravity="center"
+                android:background="@drawable/bg_nav_active">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Home"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+
+            <!-- SEKAT PEMISAH VERTIKAL 1 -->
+            <View
+                android:layout_width="1.5dp"
+                android:layout_height="24dp"
+                android:background="#E0EBE5" />
+
+            <!-- TAB 2: ORDER -->
+            <LinearLayout
+                android:id="@+id/navOrder"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Order"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#7A9A8B" />
+            </LinearLayout>
+
+            <!-- SEKAT PEMISAH VERTIKAL 2 -->
+            <View
+                android:layout_width="1.5dp"
+                android:layout_height="24dp"
+                android:background="#E0EBE5" />
+
+            <!-- TAB 3: PROFILE -->
+            <LinearLayout
+                android:id="@+id/navProfile"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profile"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#7A9A8B" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

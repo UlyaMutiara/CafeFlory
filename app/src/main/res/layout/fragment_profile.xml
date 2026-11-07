@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EAF2EE"
+    android:scrollbars="none"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Sapaan Nama Dinamis -->
+        <TextView
+            android:id="@+id/tvProfileHalo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Halo Nama"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#2C4A3E"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Judul Seksi -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile Saya"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#2C4A3E"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile Setting"
+            android:textSize="14sp"
+            android:textColor="#7A9A8B"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Input Nama untuk Pengaturan Profile -->
+        <EditText
+            android:id="@+id/etProfileNama"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="nama"
+            android:textColorHint="#9CAFA6"
+            android:textColor="#2C4A3E"
+            android:paddingHorizontal="16dp"
+            android:background="@drawable/edittext_custom"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Tombol Save -->
+        <Button
+            android:id="@+id/btnProfileSave"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Save"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="#2C4A3E" />
+
+    </LinearLayout>
+</ScrollView>

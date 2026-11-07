@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EAF2EE"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Sapaan Nama Pengguna -->
+        <TextView
+            android:id="@+id/tvHaloNama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Halo Nama"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#2C4A3E"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Judul Seksi Makanan/Menu -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Food and Beverages"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#2C4A3E"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Daftar 10 Menu Item -->
+        <include android:id="@+id/itemMenu1" layout="@layout/item_menu" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" />
+        <include android:id="@+id/itemMenu2" layout="@layout/item_menu" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" />
+        <include android:id="@+id/itemMenu3" layout="@layout/item_menu" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" />
+        <include android:id="@+id/itemMenu4" layout="@layout/item_menu" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" />
+        <include android:id="@+id/itemMenu5" layout="@layout/item_menu" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" />
+        <include android:id="@+id/itemMenu6" layout="@layout/item_menu" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" />
+        <include android:id="@+id/itemMenu7" layout="@layout/item_menu" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" />
+        <include android:id="@+id/itemMenu8" layout="@layout/item_menu" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" />
+        <include android:id="@+id/itemMenu9" layout="@layout/item_menu" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" />
+        <include android:id="@+id/itemMenu10" layout="@layout/item_menu" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="24dp" />
+
+    </LinearLayout>
+</ScrollView>
